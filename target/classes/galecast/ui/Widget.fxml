@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="200.0" maxWidth="250.0" minHeight="200.0" minWidth="250.0" prefHeight="200.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="galecast.ui.WidgetController">
+   <children>
+      <Label fx:id="temperatureLabel" alignment="CENTER_RIGHT" layoutX="11.0" layoutY="2.0" text="10°">
+         <font>
+            <Font size="70.0" />
+         </font>
+      </Label>
+      <Label fx:id="locationLabel" layoutX="15.0" layoutY="90.0" text="Gothenburg, SE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cityInput" alignment="CENTER" layoutY="161.0" maxHeight="25.0" maxWidth="250.0" onAction="#onEnter" opacity="0.8" prefHeight="25.0" prefWidth="250.0" promptText="Enter city" style="-fx-background-color: transparent; -fx-background-insets: 0; -fx-padding: 1 3 1 3;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label fx:id="windSpeedLabel" alignment="CENTER" layoutX="45.0" layoutY="121.0" maxWidth="40.0" minWidth="40.0" prefHeight="25.0" prefWidth="40.0" text="0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="humidityLabel" alignment="CENTER" layoutX="118.0" layoutY="121.0" maxWidth="40.0" minWidth="40.0" prefHeight="25.0" prefWidth="40.0" text="0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="cloudinessLabel" alignment="CENTER" layoutX="190.0" layoutY="121.0" maxWidth="40.0" minWidth="40.0" prefHeight="25.0" prefWidth="40.0" text="0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="25.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/assets/wind.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="96.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/assets/humidity.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="168.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/assets/cloudiness.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="weatherIconView" fitHeight="100.0" fitWidth="100.0" layoutX="122.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/assets/noConnection.png" />
+         </image></ImageView>
+      <ImageView fx:id="closeIconView" fitHeight="20.0" fitWidth="20.0" layoutX="227.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/assets/close.png" />
+         </image></ImageView>
+      <ImageView fx:id="refreshIconView" fitHeight="20.0" fitWidth="20.0" layoutX="226.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/assets/refresh.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>
