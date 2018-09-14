@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="200.0" maxWidth="250.0" minHeight="200.0" minWidth="250.0" prefHeight="200.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="galecast.ui.WidgetController">
    <children>
-      <Label fx:id="temperatureLabel" alignment="CENTER_RIGHT" layoutX="11.0" layoutY="2.0" text="10°">
+      <Label fx:id="temperatureLabel" alignment="CENTER_RIGHT" layoutX="11.0" layoutY="2.0" prefHeight="108.0" prefWidth="111.0" text="10°">
          <font>
             <Font size="70.0" />
          </font>
@@ -53,7 +53,7 @@
             <Image url="@/assets/cloudiness.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="weatherIconView" fitHeight="100.0" fitWidth="100.0" layoutX="122.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="weatherIconView" fitHeight="80.0" fitWidth="80.0" layoutX="143.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@/assets/noConnection.png" />
          </image></ImageView>
@@ -65,5 +65,10 @@
          <image>
             <Image url="@/assets/refresh.png" />
          </image></ImageView>
+      <Label fx:id="weatherTypeLabel" alignment="CENTER" layoutX="142.0" layoutY="90.0" maxHeight="25.0" maxWidth="80.0" minHeight="25.0" minWidth="80.0" prefHeight="25.0" prefWidth="80.0" text="Cloudy">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

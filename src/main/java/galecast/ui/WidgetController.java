@@ -1,8 +1,5 @@
 package galecast.ui;
 
-import java.io.File;
-import java.net.MalformedURLException;
-
 import galecast.GaleCast;
 import galecast.data.CurrentWeather;
 import javafx.event.ActionEvent;
@@ -29,6 +26,8 @@ public class WidgetController {
 	private Label humidityLabel;
 	@FXML 
 	private Label cloudinessLabel;
+	@FXML 
+	private Label weatherTypeLabel;
 	@FXML
 	private ImageView weatherIconView;
 	@FXML
@@ -87,6 +86,7 @@ public class WidgetController {
 	public void setInterfaceElements(CurrentWeather currentWeather) {
 		String city        = currentWeather.getCityName();
 		String countryCode = currentWeather.getStationData().getCountryCode();
+		String weatherType = currentWeather.getWeatherData().getType();
 		int    temperature = currentWeather.getAtmosphericData().getTemperature();
 		int    humidity    = currentWeather.getAtmosphericData().getHumidity();
 		int    cloudiness  = currentWeather.getCloudsData().getCloudiness();
@@ -102,11 +102,12 @@ public class WidgetController {
 			e.printStackTrace();
 		}
 
-		temperatureLabel.setText(temperature + "°");
-		locationLabel   .setText(city + ", " + countryCode);
-		windSpeedLabel  .setText(String.valueOf(windSpeed));
-		humidityLabel   .setText(String.valueOf(cloudiness) + "%");
 		cloudinessLabel .setText(String.valueOf(humidity) + "%");
+		humidityLabel   .setText(String.valueOf(cloudiness) + "%");
+		locationLabel   .setText(city + ", " + countryCode);	
+		temperatureLabel.setText(temperature + "°");
+		weatherTypeLabel.setText(weatherType);
+		windSpeedLabel  .setText(String.valueOf(windSpeed));
 	}
 	
 }
